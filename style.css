@@ -1,0 +1,209 @@
+/* Start Global Style */
+
+:root {
+    --primary-background: hsl(32, 37%, 92%);
+    --primary-buttom: #3c8067;
+    --primary-buttom-hover: #285444;
+    --color-font-head:#1c232b;
+    --color-font-paragraph:#6c7289;
+    --padding-text: 30px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: var(--primary-background);
+}
+
+/* End Global Style */
+/* Start content */
+.card {
+    margin: 50px auto;
+    width: 800px;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 2%;
+}
+
+
+@media (max-width:767px) {
+    .card {
+        margin: 50px auto;
+        width: 370px;
+        height: 680px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 2%;
+    }
+}
+
+.card .imges {
+    width: 400px;
+    height: 600px;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    border-radius: 2% 0 0 2%;
+}
+
+@media (max-width:767px) {
+    .card .imges {
+        width: 100%;
+        height: 40%;
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: cover;
+        border-radius: 3% 3% 0 0;
+    }
+}
+
+
+
+/* Start Card Text*/
+
+.card .content {
+    padding-left: 50px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    /*  */
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+
+.card .content .text {
+    height: 60%;
+}
+.card .content .text > p:first-child {
+    color: var(--color-font-paragraph);
+    padding: var(--padding-text) 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card .content .text > h2 {
+    width: 70%;
+    padding-bottom: var(--padding-text);
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    line-height: 40px;
+}
+
+.card .content .text > p:last-child {
+    width: 70%;
+    color: var(--color-font-paragraph);
+    font-size: 14px;
+    line-height: 30px;
+}
+
+@media (max-width:767px) {
+    .card .content {
+        padding-left: 30px;
+        width: 90%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card .content .text {
+        height: 10%;
+    }
+    .card .content .text > p:first-child {
+        font-size: 12px;
+    }
+    .card .content .text > h2 {
+        width: 100%;
+        font-size: 35px;
+        padding-bottom: 10px;
+    }
+    .card .content .text > p:last-child {
+        width: 100%;
+        line-height: 25px;
+    }
+}
+
+
+/* End Card Text */
+/* Start Card Prise */
+
+.card .content .prais {
+    height: 40%;
+}
+
+.card .content .prais > p {
+    color: var(--primary-buttom);
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: var(--padding-text);
+    padding-bottom: 20px;
+}
+
+.card .content .prais > p > span {
+    position: absolute;
+    color: var(--color-font-paragraph);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    top: 20%;
+    left: 50%;
+    transform: translatey(20%);
+    text-decoration: line-through;
+}
+
+.card .content .prais button {
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--primary-buttom);
+    font-size: 18px;
+    position: relative;
+    width: 300px;
+    padding: 15px var(--padding-text) ;
+    transition: 0.4s ease;
+}
+
+.card .content .prais button:hover {
+    cursor: pointer;
+    background-color: var(--primary-buttom-hover)
+}
+
+.card .content .prais button img{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    width: 18px;
+}
+
+@media (max-width:767px) {
+    .card .content .prais > p {
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .card .content .prais > p > span {
+        top: 20%;
+        left: 50%;
+        transform: translateX(50%);
+    }
+    .card .content .prais button {
+        padding-left: 15%;
+    }
+
+}
+/* End Card Prise */
+/* End content */
+
